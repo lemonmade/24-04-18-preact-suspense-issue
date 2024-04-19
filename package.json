@@ -1,0 +1,52 @@
+{
+  "name": "24-04-18-preact-suspense-issue",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "rollup --config ./rollup.config.js",
+    "format": "prettier --write --cache .",
+    "lint": "prettier --check --cache .",
+    "test": "vitest --config ./vite.config.js",
+    "type-check": "tsc --build --pretty",
+    "typescript:run": "tsx --conditions quilt:source",
+    "typescript:watch": "tsx watch --conditions quilt:source",
+    "develop": "vite --config ./vite.config.js",
+    "start": "node ./build/server/server.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@preact/signals": "^1.2.3",
+    "@quilted/quilt": "^0.6.0",
+    "@quilted/rollup": "^0.2.0",
+    "@quilted/typescript": "^0.3.0",
+    "@quilted/vite": "^0.1.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "preact": "^10.20.0",
+    "prettier": "^3.0.0",
+    "react": "npm:@quilted/react@^18.2.0",
+    "react-dom": "npm:@quilted/react-dom@^18.2.0",
+    "rollup": "^4.14.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.0",
+    "vite": "^5.2.0",
+    "vitest": "^1.4.0"
+  },
+  "sideEffects": [
+    "*.css",
+    "browser.tsx"
+  ],
+  "browserslist": {
+    "defaults": [
+      "defaults and fully supports es6-module-dynamic-import"
+    ]
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSpacing": false,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "packageManager": "pnpm@9.0.4+sha256.caa915eaae9d9aefccf50ee8aeda25a2f8684d8f9d5c6e367eaf176d97c1f89e"
+}
